@@ -1,6 +1,6 @@
 > DiyyMotion © 2026 @diyy4a__. See `OWNERSHIP.md` for provenance and usage restrictions.
 
-# DiyyMotion v1.3.2 Private Obfuscated Watermarked
+# DiyyMotion v1.3.2
 
 Private local build for Mises/Chromium-compatible browsers.
 
