@@ -2,7 +2,7 @@
 
 # DiyyMotion v1.3.2
 
-Private local build for Mises/Chromium-compatible browsers.
+Private local build for Chromium-compatible browsers.
 
 ## Protection applied
 
