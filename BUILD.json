@@ -1,0 +1,159 @@
+{
+  "payload": {
+    "schema": "https://diyymotion.local/build/v1",
+    "project": "DiyyMotion",
+    "creator": "@diyy4a__",
+    "version": "1.4.0",
+    "buildId": "DYM-140-20260619",
+    "official": true,
+    "generatedAt": "2026-06-18T23:23:46Z",
+    "files": [
+      {
+        "path": "OWNERSHIP.md",
+        "sha256": "a024300305d6aa384043c982e64b13565387134d6ba30c5b16ac17b4eca59a6c",
+        "size": 754
+      },
+      {
+        "path": "PRIVACY.md",
+        "sha256": "b33141830159a0ab19dfbad39131467293b80ffad797f19b11ce11e80b203b0c",
+        "size": 778
+      },
+      {
+        "path": "PROVENANCE.json",
+        "sha256": "b80f5a94780d52e28fcc87bd9804760a5a0b4c6902fd8e1ef9c0ef0ecd7b6161",
+        "size": 494
+      },
+      {
+        "path": "README.md",
+        "sha256": "b100b1cc577af8aacbc87d1e74d8d42023c440e9acefd4fba9aabcf75b9dc228",
+        "size": 2235
+      },
+      {
+        "path": "THIRD_PARTY_NOTICES.md",
+        "sha256": "88141deeba1dc5ee683ab98923d72003cc49c1dc3e837d390833e8e3dbad70da",
+        "size": 416
+      },
+      {
+        "path": "assets/logo.png",
+        "sha256": "98c1c74a665ce6b010aaf2040e608cafeb18fd94f74e251317d9cced717517c0",
+        "size": 43824
+      },
+      {
+        "path": "background.js",
+        "sha256": "7fb9c50b89756a9f3b1d2e0aee7f232e3e382c6c6e01b0857429b1b392e8ea0d",
+        "size": 18547
+      },
+      {
+        "path": "content/main.js",
+        "sha256": "0ecb7a6a2ed5aaa0f83530a8730a808e82a2c4b7f8f73b099cc5ac7f780bbb9a",
+        "size": 38829
+      },
+      {
+        "path": "content/profile.css",
+        "sha256": "1356c7c05630a4b6c1f71c9551acab8ab92c8d589a8124c36cd8e1aa098f519c",
+        "size": 6088
+      },
+      {
+        "path": "content/profile.js",
+        "sha256": "a0ff91d263f068034070ddd4ec3c1cc6df7fb4372ddb2b6193337f27e7264dfd",
+        "size": 100579
+      },
+      {
+        "path": "content/studio.css",
+        "sha256": "de25f5f73ce346dacf9eb5c42f093f1883ec256ca122989e85d0037f9b9ceaae",
+        "size": 8457
+      },
+      {
+        "path": "content/studio.js",
+        "sha256": "424907ec04b40a5c42754e12de492506a2b2629e142d79d7b281afa75573bcc2",
+        "size": 136978
+      },
+      {
+        "path": "content/video.css",
+        "sha256": "ba7704b7a0b79012bfd3855baac0e38b3bdf1c3d82596a67f0b920d705ed628d",
+        "size": 4244
+      },
+      {
+        "path": "content/video.js",
+        "sha256": "b23bb5cae7c8ff61f3e2f207f8c517187bdbc954a6512f712a285c985e78e3c0",
+        "size": 49780
+      },
+      {
+        "path": "dashboard.html",
+        "sha256": "d641e901b84728348341c7862dd7c6a71172b35404cafd3da605e4d2eb109ca6",
+        "size": 24155
+      },
+      {
+        "path": "icons/icon128.png",
+        "sha256": "12058e4775fcd87a37c6884996c330330fe214d3bdc06f7cbae3724a9a050db9",
+        "size": 5803
+      },
+      {
+        "path": "icons/icon16.png",
+        "sha256": "bae3ec22db91ea0e30a16a19a3c31faac26421ff866cb7e4f8e22194c195f5d9",
+        "size": 463
+      },
+      {
+        "path": "icons/icon32.png",
+        "sha256": "f84c47f00fb29e5213a70d60d7c0e7afdf05717ec966aaf3ee484446308ce755",
+        "size": 937
+      },
+      {
+        "path": "icons/icon48.png",
+        "sha256": "9613014769644ff46ae717d700268759c1e07cf1cd2f551d011b052a3c1a450b",
+        "size": 1551
+      },
+      {
+        "path": "lib/ffmpeg/ffmpeg-client.js",
+        "sha256": "9dac4a20a38907d99f23a201befbc3220e9e62abbd97fcba52e486e5a6aa663d",
+        "size": 35059
+      },
+      {
+        "path": "lib/ffmpeg/ffmpeg-core.js",
+        "sha256": "87b7051660c5f527f8d5eb32994403f9d2b936fafbfd8b51717b30f104f40e6a",
+        "size": 111948
+      },
+      {
+        "path": "lib/ffmpeg/ffmpeg-core.wasm",
+        "sha256": "9f57947a5bd530d8f00c5b3f2cb2a3492faa7e5d823315342d6a8656d0a6b7b7",
+        "size": 32232419
+      },
+      {
+        "path": "lib/ffmpeg/ffmpeg-worker.js",
+        "sha256": "2c6c4e0d7862319ff1e19241a612d9141129578a3e923045010af35eecd1f220",
+        "size": 11560
+      },
+      {
+        "path": "lib/mp4.js",
+        "sha256": "aebe3ba91996a5bee0667842b00c62c8fb27d963b73b6feda5ea8744c0d53368",
+        "size": 37719
+      },
+      {
+        "path": "manifest.json",
+        "sha256": "e2c86757a2808fa193ad48cbc17abb41faee946867960d73fa23581baf9ed55b",
+        "size": 2629
+      },
+      {
+        "path": "popup.css",
+        "sha256": "192d59af138dc49343902c7b5a1f54c5891cb8a7de29bdd00ef9837a48a7efff",
+        "size": 23060
+      },
+      {
+        "path": "popup.html",
+        "sha256": "d641e901b84728348341c7862dd7c6a71172b35404cafd3da605e4d2eb109ca6",
+        "size": 24155
+      },
+      {
+        "path": "popup.js",
+        "sha256": "df6cf3f4e14a3123cbfafd79a8424a8001b64997a93718f28b88c8b77129c2a3",
+        "size": 346078
+      },
+      {
+        "path": "preview.html",
+        "sha256": "d641e901b84728348341c7862dd7c6a71172b35404cafd3da605e4d2eb109ca6",
+        "size": 24155
+      }
+    ]
+  },
+  "signature": "X3whqH1aGWzywNaTxBaFRfosp1uIfUjSRMDF3J0zTefSV+TnA4SfCaidJhrYyh9m4Bfr4SbWLXJp6KxnSC2Hjg=="
+}

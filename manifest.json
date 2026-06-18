@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "DiyyMotion",
-  "version": "1.3.2",
-  "description": "DiyyMotion by @diyy4a__: private TikTok creator tools with local video processing and no activation.",
+  "version": "1.4.0",
+  "description": "DiyyMotion by @diyy4a__: TikTok creator tools with local video processing and no activation.",
   "permissions": [
     "cookies",
     "downloads",
@@ -15,22 +15,13 @@
     "https://*.byteoversea.com/*",
     "https://tiktok.com/*",
     "https://tiktokcdn.com/*",
-    "https://byteoversea.com/*"
+    "https://byteoversea.com/*",
+    "https://api.github.com/*",
+    "https://github.com/*"
   ],
   "background": {
-    "scripts": [
-      "background.js"
-    ]
-  },
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "diyymotion@diyy4a.dev",
-      "data_collection_permissions": {
-        "required": [
-          "none"
-        ]
-      }
-    }
+    "service_worker": "background.js",
+    "type": "module"
   },
   "action": {
     "default_title": "DiyyMotion",

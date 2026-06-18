@@ -1,1 +1,267 @@
-<!doctype html><!-- DiyyMotion © 2026 @diyy4a__. Original project. Unauthorized copying, rebranding, redistribution, or derivative resale is prohibited. See OWNERSHIP.md. --><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>DiyyMotion</title><link rel="stylesheet" href="popup.css"></head><body data-theme="dark"><div class="shell"><header class="topbar glass"><div class="brand-wrap"><img class="brand-logo" src="assets/logo.png" alt="DiyyMotion"><div><div class="brand-name">DiyyMotion</div><div class="brand-subtitle" data-i18n="brand.subtitle">TikTok Creator Extension</div></div></div><div class="version-pill"><span></span>v1.3.2</div></header><nav class="tabs glass" aria-label="Navigation"><button class="tab active" data-tab="dashboard" data-i18n="tabs.dashboard">Dashboard</button> <button class="tab" data-tab="methods" data-i18n="tabs.methods">Fusion</button> <button class="tab" data-tab="tools" data-i18n="tabs.tools">Tools</button> <button class="tab" data-tab="settings" data-i18n="tabs.settings">Settings</button></nav><main><section class="view active" id="view-dashboard"><div class="hero glass"><div class="hero-copy"><span class="kicker">DiyyMotion Fusion</span><h1 data-i18n="dashboard.title">Active upload pipeline</h1><p data-i18n="dashboard.text">Videos are analyzed, processed locally when needed, then handed back to the official TikTok Studio uploader.</p></div><div class="hero-orbit"><img src="assets/logo.png" alt=""></div></div><div class="pipeline glass"><div class="section-head"><div><span class="section-label" data-i18n="dashboard.activeMethod">Active method</span><h2 id="activeMethodLabel">DiyyMotion Fusion</h2></div><span class="status-chip" id="pipelineStatus"><span></span>Enabled</span></div><div class="flow" aria-label="Upload flow"><div class="flow-step"><span>1</span><div><strong data-i18n="dashboard.step1Title">Select video</strong><small data-i18n="dashboard.step1Text">TikTok Studio reads the selected file from your device.</small></div></div><div class="flow-step"><span>2</span><div><strong data-i18n="dashboard.step2Title">Process locally</strong><small data-i18n="dashboard.step2Text">Fusion applies HQ fallback, metadata optimization, audio normalization, and legacy compatibility when required.</small></div></div><div class="flow-step"><span>3</span><div><strong data-i18n="dashboard.step3Title">Return to TikTok</strong><small data-i18n="dashboard.step3Text">The processed result is handed back to the official uploader.</small></div></div></div></div><div class="stats-grid"><div class="stat-card glass"><span data-i18n="dashboard.statsProcessed">Processed files</span><strong id="processedCount">0</strong></div><div class="stat-card glass"><span data-i18n="dashboard.statsData">Processed data</span><strong id="processedSize">0 MB</strong></div><div class="stat-card glass wide"><span data-i18n="dashboard.statsLast">Last processed</span><strong id="lastProcessed">No activity yet</strong></div></div><div class="feature-grid glass"><div class="feature-card"><span class="feature-icon">F</span><div><strong data-i18n="dashboard.cardFusion">Fusion Pipeline</strong><small id="processingProfile">DiyyMotion Fusion</small></div></div><div class="feature-card"><span class="feature-icon">C</span><div><strong data-i18n="dashboard.cardCaption">Caption</strong><small id="captionState">At publish</small></div></div><div class="feature-card"><span class="feature-icon">S</span><div><strong data-i18n="dashboard.cardStats">Creator analytics</strong><small id="statsState">Enabled</small></div></div><div class="feature-card"><span class="feature-icon">D</span><div><strong data-i18n="dashboard.cardDownload">Source download</strong><small id="downloadState">Enabled</small></div></div></div><button class="primary-action" id="openStudioBtn" type="button" data-i18n="dashboard.openStudio">Open TikTok Studio</button></section><section class="view" id="view-methods"><div class="section-title"><span class="kicker" data-i18n="methods.kicker">Processing</span><h1>DiyyMotion Fusion</h1><p data-i18n="methods.intro">A single adaptive pipeline. Core quality features stay together so users do not need to switch between separate methods.</p></div><div class="fusion-card glass"><div class="fusion-brand"><img src="assets/logo.png" alt=""><div><span class="section-label" data-i18n="methods.activePipeline">Active pipeline</span><h2>DiyyMotion Fusion</h2><p data-i18n="methods.activeDesc">Local processing with a safe fallback to the original file.</p></div><span class="fusion-state" id="fusionState"><i></i>Enabled</span></div><div class="fusion-flow"><div class="fusion-stage"><span>01</span><div><strong data-i18n="methods.stage1Title">Preflight</strong><small data-i18n="methods.stage1Text">Format, size, resolution, and duration checks.</small></div></div><div class="fusion-stage"><span>02</span><div><strong data-i18n="methods.stage2Title">Optimize</strong><small data-i18n="methods.stage2Text">Video, container, audio, and metadata optimization.</small></div></div><div class="fusion-stage"><span>03</span><div><strong data-i18n="methods.stage3Title">Handoff</strong><small data-i18n="methods.stage3Text">The processed file is returned to TikTok Studio.</small></div></div></div><div class="fusion-chips"><div id="fusionHqComponent"><span data-i18n="methods.videoLabel">Video</span><strong>H.264 HQ</strong></div><div id="fusionMatrixComponent"><span data-i18n="methods.containerLabel">Container</span><strong>Fast Start + Matrix</strong></div><div id="fusionAudioComponent"><span data-i18n="methods.audioLabel">Audio</span><strong>AAC 48 kHz</strong></div><div id="fusionLegacyComponent"><span data-i18n="methods.compatLabel">Compatibility</span><strong>Legacy 1080/60</strong></div></div></div><div class="settings-card glass"><div class="card-heading"><span data-i18n="methods.componentsTitle">Fusion components</span><small data-i18n="methods.componentsText">These components are enabled by default and used only when the selected file needs them.</small></div><label class="toggle-row"><div><strong data-i18n="methods.hqTitle">HQ fallback</strong><small data-i18n="methods.hqText">Runs a local HQ encode when the source does not fit the upload profile.</small></div><input id="fusionHqFallbackEnabled" type="checkbox"><span class="switch"></span></label> <label class="toggle-row"><div><strong data-i18n="methods.matrixTitle">Clean Matrix B</strong><small data-i18n="methods.matrixText">Optimizes MP4 container metadata after the main process.</small></div><input id="cleanMatrixEnabled" type="checkbox"><span class="switch"></span></label> <label class="toggle-row"><div><strong data-i18n="methods.audioTitle">Audio AAC 48 kHz</strong><small data-i18n="methods.audioText">Normalizes audio for better upload compatibility.</small></div><input id="promoAudioEnabled" type="checkbox"><span class="switch"></span></label> <label class="toggle-row"><div><strong data-i18n="methods.legacyTitle">Legacy 1080/60</strong><small data-i18n="methods.legacyText">Keeps compatibility with older client-side validation rules.</small></div><input id="legacyFpsBypassEnabled" type="checkbox"><span class="switch"></span></label></div><details class="advanced-panel glass"><summary><span data-i18n="methods.advancedTitle">Advanced processing</span><small data-i18n="methods.advancedText">Encode, metadata timing, and the manual processor</small></summary><div class="advanced-content"><label class="control-label" for="timingFactor" data-i18n="methods.timingLabel">Metadata timing</label> <select id="timingFactor"><option value="1" data-i18n="timing.normal">Normal</option><option value="2" data-i18n="timing.x2">2× timing</option><option value="4" data-i18n="timing.x4">4× timing</option><option value="8" data-i18n="timing.x8">8× timing</option></select><div class="field-grid three"><label><span data-i18n="methods.crfLabel">HQ CRF</span><input id="hqCrf" type="number" min="14" max="28"></label> <label><span data-i18n="methods.maxBitrateLabel">Max bitrate</span><div class="input-suffix"><input id="hqMaxBitrateMbps" type="number" min="4" max="40"><b>Mbps</b></div></label> <label><span data-i18n="methods.presetLabel">Preset</span><select id="hqPreset"><option value="ultrafast">Ultrafast</option><option value="superfast">Superfast</option><option value="veryfast">Veryfast</option><option value="faster">Faster</option><option value="fast">Fast</option></select></label></div><div class="manual-divider"></div><div class="card-heading"><span data-i18n="manual.title">Manual processor</span><small data-i18n="manual.text">Process and download a file without opening TikTok Studio.</small></div><label class="dropzone" id="dropzone" for="fileInput"><input id="fileInput" type="file" accept="video/*"><div class="drop-symbol">+</div><strong data-i18n="manual.selectVideo">Select video</strong><small data-i18n="manual.selectHelp">Tap or drop a file into this area</small></label><div class="file-card hidden" id="fileCard"><div class="file-row"><span data-i18n="manual.name">Name</span><strong id="fileName">-</strong></div><div class="file-row"><span data-i18n="manual.size">Size</span><strong id="fileSize">-</strong></div><div class="file-row"><span data-i18n="manual.duration">Duration</span><strong id="fileDuration">-</strong></div><div class="file-row"><span data-i18n="manual.fps">FPS</span><strong id="fileFps">-</strong></div><div class="file-row"><span data-i18n="manual.resolution">Resolution</span><strong id="fileResolution">-</strong></div></div><label class="control-label" for="manualProfile" data-i18n="manual.methodLabel">Manual method</label> <select id="manualProfile"><option value="metadata" data-i18n="manual.methodMetadata">Metadata Patch</option><option value="hq" data-i18n="manual.methodHQ">HQ Local Encode</option><option value="fps" data-i18n="manual.methodFPS">FPS Timing Patch</option><option value="original" data-i18n="manual.methodOriginal">Original file</option></select><div class="fps-target hidden" id="fpsTargetWrap"><label><span data-i18n="manual.targetFps">Target FPS</span><input id="targetFps" type="number" min="1" max="240" value="60"></label></div><button class="secondary-action" id="processBtn" type="button" disabled data-i18n="manual.process">Process & Download</button><div class="progress-shell hidden" id="manualProgress"><span></span></div><div class="status" id="status" data-i18n="status.readyManual">Select a video to begin.</div></div></details><button class="primary-action" id="saveMethodsBtn" type="button" data-i18n="methods.save">Save Fusion Settings</button><div class="status" id="methodsStatus"></div></section><section class="view" id="view-tools"><div class="section-title"><span class="kicker" data-i18n="tools.kicker">Creator utilities</span><h1 data-i18n="tools.title">Creator Tools</h1><p data-i18n="tools.text">Analytics, source download, repost control, and upload repair tools.</p></div><div class="tool-list"><button class="tool-card glass" id="openUploadTool" type="button"><span class="tool-icon">U</span><div><strong data-i18n="tools.studioTitle">TikTok Studio</strong><small data-i18n="tools.studioText">Open the upload and content dashboard.</small></div><b>›</b></button> <button class="tool-card glass" id="openProfileTool" type="button"><span class="tool-icon">R</span><div><strong data-i18n="tools.repostTitle">Repost Remover</strong><small data-i18n="tools.repostText">Open your profile and manage reposts with filters.</small></div><b>›</b></button> <button class="tool-card glass" id="clearTtwidBtn" type="button"><span class="tool-icon">F</span><div><strong data-i18n="tools.fixTitle">Fix Upload</strong><small data-i18n="tools.fixText">Clear the TTWID cookie when TikTok upload gets stuck.</small></div><b>›</b></button></div><div class="settings-card glass"><div class="card-heading"><span data-i18n="tools.featuresTitle">Creator feature switches</span><small data-i18n="tools.featuresText">Enable only the features you actually use.</small></div><label class="toggle-row"><div><strong data-i18n="tools.authorTitle">Author Statistics</strong><small data-i18n="tools.authorText">Profile statistics and average likes.</small></div><input id="authorStatsEnabled" type="checkbox"><span class="switch"></span></label> <label class="toggle-row"><div><strong data-i18n="tools.videoTitle">Video Statistics</strong><small data-i18n="tools.videoText">Views, likes, comments, shares, and saves.</small></div><input id="videoStatsEnabled" type="checkbox"><span class="switch"></span></label> <label class="toggle-row"><div><strong data-i18n="tools.enhancedTitle">Enhanced Statistics</strong><small data-i18n="tools.enhancedText">Engagement rate and derived metrics.</small></div><input id="enhancedStatsEnabled" type="checkbox"><span class="switch"></span></label> <label class="toggle-row"><div><strong data-i18n="tools.downloadTitle">Original Download</strong><small data-i18n="tools.downloadText">Download the best detected source URL from video pages.</small></div><input id="originalDownloadEnabled" type="checkbox"><span class="switch"></span></label> <label class="toggle-row"><div><strong data-i18n="tools.removerTitle">Repost Remover</strong><small data-i18n="tools.removerText">Filter, pause, stop, and export reports.</small></div><input id="repostRemoverEnabled" type="checkbox"><span class="switch"></span></label></div><button class="primary-action" id="saveToolsBtn" data-i18n="tools.save">Save Tools</button><div class="status" id="toolsStatus"></div></section><section class="view" id="view-settings"><div class="section-title"><span class="kicker" data-i18n="settings.kicker">Configuration</span><h1 data-i18n="settings.title">Studio Settings</h1><p data-i18n="settings.text">Control the interceptor, appearance, preflight, and publish-time caption behavior.</p></div><div class="settings-card glass"><div class="card-heading"><span data-i18n="settings.appearanceTitle">Appearance</span><small data-i18n="settings.appearanceText">Choose your interface language and theme.</small></div><div class="option-row"><div><strong data-i18n="settings.languageTitle">Language</strong><small data-i18n="settings.languageText">The dashboard language used by the extension UI.</small></div><select id="uiLanguage" class="row-select"><option value="en">English</option><option value="id">Bahasa Indonesia</option><option value="ru">Русский</option></select></div><label class="toggle-row"><div><strong data-i18n="settings.lightModeTitle">Light Mode</strong><small data-i18n="settings.lightModeText">Switch between the dark and light liquid glass themes.</small></div><input id="lightModeEnabled" type="checkbox"><span class="switch"></span></label></div><div class="settings-card glass"><div class="card-heading"><span data-i18n="settings.behaviorTitle">Studio Behavior</span><small data-i18n="settings.behaviorText">Core upload controls for TikTok Studio.</small></div><label class="toggle-row"><div><strong data-i18n="settings.autoProcessTitle">Automatic processing</strong><small data-i18n="settings.autoProcessText">Hold the file before TikTok Studio receives it.</small></div><input id="autoProcessEnabled" type="checkbox"><span class="switch"></span></label> <label class="toggle-row"><div><strong data-i18n="settings.badgeTitle">Status badge</strong><small data-i18n="settings.badgeText">Show the DiyyMotion status badge inside TikTok Studio.</small></div><input id="badgeEnabled" type="checkbox"><span class="switch"></span></label> <label class="toggle-row"><div><strong data-i18n="settings.compactBadgeTitle">Compact badge</strong><small data-i18n="settings.compactBadgeText">Use a smaller badge layout.</small></div><input id="compactBadgeEnabled" type="checkbox"><span class="switch"></span></label> <label class="toggle-row"><div><strong data-i18n="settings.panelTitle">Studio panel</strong><small data-i18n="settings.panelText">Show the optional upload status panel.</small></div><input id="studioPanelEnabled" type="checkbox"><span class="switch"></span></label> <label class="toggle-row"><div><strong data-i18n="settings.preflightTitle">Quality preflight</strong><small data-i18n="settings.preflightText">Check size, format, duration, and resolution.</small></div><input id="preflightEnabled" type="checkbox"><span class="switch"></span></label></div><div class="settings-card glass"><div class="card-heading"><span data-i18n="settings.publishTitle">Publish caption</span><small data-i18n="settings.publishText">The caption is injected right before the publish action is sent.</small></div><label class="toggle-row"><div><strong data-i18n="settings.captionTitle">Caption at Publish</strong><small data-i18n="settings.captionText">Apply the configured caption only when the Publish button is pressed.</small></div><input id="autoCaptionEnabled" type="checkbox"><span class="switch"></span></label> <label class="toggle-row"><div><strong data-i18n="settings.signatureTitle">Publish signature guard</strong><small data-i18n="settings.signatureText">Keep the publish signature attached to the final request.</small></div><input id="publishSignatureEnabled" type="checkbox"><span class="switch"></span></label> <label class="control-label" for="captionSuffix" data-i18n="settings.captionLabel">Caption text</label> <textarea id="captionSuffix" rows="3" maxlength="220"></textarea></div><div class="settings-card glass"><div class="card-heading"><span data-i18n="settings.limitsTitle">Upload guidance</span><small data-i18n="settings.limitsText">Recommended constraints used during preflight.</small></div><div class="field-grid"><label><span data-i18n="settings.recommendedSize">Recommended size</span><div class="input-suffix"><input id="maxFileMb" type="number" min="1" max="4096"><b>MB</b></div></label> <label><span data-i18n="settings.minLongEdge">Minimum long edge</span><div class="input-suffix"><input id="minLongEdge" type="number" min="240" max="8192"><b>px</b></div></label></div></div><button class="primary-action" id="saveSettingsBtn" data-i18n="settings.save">Save Settings</button><div class="status" id="settingsStatus"></div></section></main></div><script type="module" src="popup.js"></script></body></html>
+<!doctype html><!-- DiyyMotion © 2026 @diyy4a__. Original project. Unauthorized copying, rebranding, redistribution, or derivative resale is prohibited. See OWNERSHIP.md. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>DiyyMotion</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body data-theme="dark">
+  <div class="shell">
+    <header class="topbar glass">
+      <div class="brand-wrap">
+        <img class="brand-logo" src="assets/logo.png" alt="DiyyMotion">
+        <div>
+          <div class="brand-name">DiyyMotion</div>
+          <div class="brand-subtitle" data-i18n="brand.subtitle">TikTok Creator Extension</div>
+        </div>
+      </div>
+      <div class="version-pill"><span></span>v1.4.0</div>
+    </header>
+
+    <nav class="tabs glass" aria-label="Navigation">
+      <button class="tab active" data-tab="dashboard" data-i18n="tabs.dashboard">Dashboard</button>
+      <button class="tab" data-tab="methods" data-i18n="tabs.methods">Fusion</button>
+      <button class="tab" data-tab="tools" data-i18n="tabs.tools">Tools</button>
+      <button class="tab" data-tab="settings" data-i18n="tabs.settings">Settings</button>
+    </nav>
+
+    <main>
+      <section class="view active" id="view-dashboard">
+        <div class="hero glass">
+          <div class="hero-copy">
+            <span class="kicker">DiyyMotion Fusion</span>
+            <h1 data-i18n="dashboard.title">Active upload pipeline</h1>
+            <p data-i18n="dashboard.text">Videos are analyzed, processed locally when needed, then handed back to the official TikTok Studio uploader.</p>
+          </div>
+          <div class="hero-orbit"><img src="assets/logo.png" alt=""></div>
+        </div>
+
+        <div class="pipeline glass">
+          <div class="section-head">
+            <div>
+              <span class="section-label" data-i18n="dashboard.activeMethod">Active method</span>
+              <h2 id="activeMethodLabel">DiyyMotion Fusion</h2>
+            </div>
+            <span class="status-chip" id="pipelineStatus"><span></span>Enabled</span>
+          </div>
+          <div class="flow" aria-label="Upload flow">
+            <div class="flow-step">
+              <span>1</span>
+              <div><strong data-i18n="dashboard.step1Title">Select video</strong><small data-i18n="dashboard.step1Text">TikTok Studio reads the selected file from your device.</small></div>
+            </div>
+            <div class="flow-step">
+              <span>2</span>
+              <div><strong data-i18n="dashboard.step2Title">Process locally</strong><small data-i18n="dashboard.step2Text">Fusion applies HQ fallback, metadata optimization, audio normalization, and legacy compatibility when required.</small></div>
+            </div>
+            <div class="flow-step">
+              <span>3</span>
+              <div><strong data-i18n="dashboard.step3Title">Return to TikTok</strong><small data-i18n="dashboard.step3Text">The processed result is handed back to the official uploader.</small></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card glass"><span data-i18n="dashboard.statsProcessed">Processed files</span><strong id="processedCount">0</strong></div>
+          <div class="stat-card glass"><span data-i18n="dashboard.statsData">Processed data</span><strong id="processedSize">0 MB</strong></div>
+          <div class="stat-card glass wide"><span data-i18n="dashboard.statsLast">Last processed</span><strong id="lastProcessed">No activity yet</strong></div>
+        </div>
+
+        <div class="feature-grid glass">
+          <div class="feature-card"><span class="feature-icon">F</span><div><strong data-i18n="dashboard.cardFusion">Fusion Pipeline</strong><small id="processingProfile">DiyyMotion Fusion</small></div></div>
+          <div class="feature-card"><span class="feature-icon">C</span><div><strong data-i18n="dashboard.cardCaption">Caption</strong><small id="captionState">At publish</small></div></div>
+          <div class="feature-card"><span class="feature-icon">S</span><div><strong data-i18n="dashboard.cardStats">Creator analytics</strong><small id="statsState">Enabled</small></div></div>
+          <div class="feature-card"><span class="feature-icon">D</span><div><strong data-i18n="dashboard.cardDownload">Source download</strong><small id="downloadState">Enabled</small></div></div>
+        </div>
+
+        <button class="primary-action" id="openStudioBtn" type="button" data-i18n="dashboard.openStudio">Open TikTok Studio</button>
+      </section>
+
+      <section class="view" id="view-methods">
+        <div class="section-title">
+          <span class="kicker" data-i18n="methods.kicker">Processing</span>
+          <h1>DiyyMotion Fusion</h1>
+          <p data-i18n="methods.intro">A single adaptive pipeline. Core quality features stay together so users do not need to switch between separate methods.</p>
+        </div>
+
+        <div class="fusion-card glass">
+          <div class="fusion-brand">
+            <img src="assets/logo.png" alt="">
+            <div>
+              <span class="section-label" data-i18n="methods.activePipeline">Active pipeline</span>
+              <h2>DiyyMotion Fusion</h2>
+              <p data-i18n="methods.activeDesc">Local processing with a safe fallback to the original file.</p>
+            </div>
+            <span class="fusion-state" id="fusionState"><i></i>Enabled</span>
+          </div>
+
+          <div class="fusion-flow">
+            <div class="fusion-stage"><span>01</span><div><strong data-i18n="methods.stage1Title">Preflight</strong><small data-i18n="methods.stage1Text">Format, size, resolution, and duration checks.</small></div></div>
+            <div class="fusion-stage"><span>02</span><div><strong data-i18n="methods.stage2Title">Optimize</strong><small data-i18n="methods.stage2Text">Video, container, audio, and metadata optimization.</small></div></div>
+            <div class="fusion-stage"><span>03</span><div><strong data-i18n="methods.stage3Title">Handoff</strong><small data-i18n="methods.stage3Text">The processed file is returned to TikTok Studio.</small></div></div>
+          </div>
+
+          <div class="fusion-chips">
+            <div id="fusionHqComponent"><span data-i18n="methods.videoLabel">Video</span><strong>H.264 HQ</strong></div>
+            <div id="fusionMatrixComponent"><span data-i18n="methods.containerLabel">Container</span><strong>Fast Start + Matrix</strong></div>
+            <div id="fusionAudioComponent"><span data-i18n="methods.audioLabel">Audio</span><strong>AAC 48 kHz</strong></div>
+            <div id="fusionLegacyComponent"><span data-i18n="methods.compatLabel">Compatibility</span><strong>Legacy 1080/60</strong></div>
+          </div>
+        </div>
+
+        <div class="settings-card glass">
+          <div class="card-heading"><span data-i18n="methods.componentsTitle">Fusion components</span><small data-i18n="methods.componentsText">These components are enabled by default and used only when the selected file needs them.</small></div>
+          <label class="toggle-row"><div><strong data-i18n="methods.hqTitle">HQ fallback</strong><small data-i18n="methods.hqText">Runs a local HQ encode when the source does not fit the upload profile.</small></div><input id="fusionHqFallbackEnabled" type="checkbox"><span class="switch"></span></label>
+          <label class="toggle-row"><div><strong data-i18n="methods.matrixTitle">Clean Matrix B</strong><small data-i18n="methods.matrixText">Optimizes MP4 container metadata after the main process.</small></div><input id="cleanMatrixEnabled" type="checkbox"><span class="switch"></span></label>
+          <label class="toggle-row"><div><strong data-i18n="methods.audioTitle">Audio AAC 48 kHz</strong><small data-i18n="methods.audioText">Normalizes audio for better upload compatibility.</small></div><input id="promoAudioEnabled" type="checkbox"><span class="switch"></span></label>
+          <label class="toggle-row"><div><strong data-i18n="methods.legacyTitle">Legacy 1080/60</strong><small data-i18n="methods.legacyText">Keeps compatibility with older client-side validation rules.</small></div><input id="legacyFpsBypassEnabled" type="checkbox"><span class="switch"></span></label>
+        </div>
+
+        <details class="advanced-panel glass">
+          <summary><span data-i18n="methods.advancedTitle">Advanced processing</span><small data-i18n="methods.advancedText">Encode, metadata timing, and the manual processor</small></summary>
+          <div class="advanced-content">
+            <label class="control-label" for="timingFactor" data-i18n="methods.timingLabel">Metadata timing</label>
+            <select id="timingFactor">
+              <option value="1" data-i18n="timing.normal">Normal</option><option value="2" data-i18n="timing.x2">2× timing</option><option value="4" data-i18n="timing.x4">4× timing</option><option value="8" data-i18n="timing.x8">8× timing</option>
+            </select>
+
+            <div class="field-grid three">
+              <label><span data-i18n="methods.crfLabel">HQ CRF</span><input id="hqCrf" type="number" min="14" max="28"></label>
+              <label><span data-i18n="methods.maxBitrateLabel">Max bitrate</span><div class="input-suffix"><input id="hqMaxBitrateMbps" type="number" min="4" max="40"><b>Mbps</b></div></label>
+              <label><span data-i18n="methods.presetLabel">Preset</span><select id="hqPreset"><option value="ultrafast">Ultrafast</option><option value="superfast">Superfast</option><option value="veryfast">Veryfast</option><option value="faster">Faster</option><option value="fast">Fast</option></select></label>
+            </div>
+
+            <div class="manual-divider"></div>
+            <div class="card-heading"><span data-i18n="manual.title">Manual processor</span><small data-i18n="manual.text">Process and download a file without opening TikTok Studio.</small></div>
+            <label class="dropzone" id="dropzone" for="fileInput"><input id="fileInput" type="file" accept="video/*"><div class="drop-symbol">+</div><strong data-i18n="manual.selectVideo">Select video</strong><small data-i18n="manual.selectHelp">Tap or drop a file into this area</small></label>
+            <div class="file-card hidden" id="fileCard">
+              <div class="file-row"><span data-i18n="manual.name">Name</span><strong id="fileName">-</strong></div>
+              <div class="file-row"><span data-i18n="manual.size">Size</span><strong id="fileSize">-</strong></div>
+              <div class="file-row"><span data-i18n="manual.duration">Duration</span><strong id="fileDuration">-</strong></div>
+              <div class="file-row"><span data-i18n="manual.fps">FPS</span><strong id="fileFps">-</strong></div>
+              <div class="file-row"><span data-i18n="manual.resolution">Resolution</span><strong id="fileResolution">-</strong></div>
+            </div>
+            <label class="control-label" for="manualProfile" data-i18n="manual.methodLabel">Manual method</label>
+            <select id="manualProfile"><option value="metadata" data-i18n="manual.methodMetadata">Metadata Patch</option><option value="hq" data-i18n="manual.methodHQ">HQ Local Encode</option><option value="fps" data-i18n="manual.methodFPS">FPS Timing Patch</option><option value="original" data-i18n="manual.methodOriginal">Original file</option></select>
+            <div class="fps-target hidden" id="fpsTargetWrap"><label><span data-i18n="manual.targetFps">Target FPS</span><input id="targetFps" type="number" min="1" max="240" value="60"></label></div>
+            <button class="secondary-action" id="processBtn" type="button" disabled data-i18n="manual.process">Process & Download</button>
+            <div class="progress-shell hidden" id="manualProgress"><span></span></div>
+            <div class="status" id="status" data-i18n="status.readyManual">Select a video to begin.</div>
+          </div>
+        </details>
+
+        <button class="primary-action" id="saveMethodsBtn" type="button" data-i18n="methods.save">Save Fusion Settings</button>
+        <div class="status" id="methodsStatus"></div>
+      </section>
+
+      <section class="view" id="view-tools">
+        <div class="section-title"><span class="kicker" data-i18n="tools.kicker">Creator utilities</span><h1 data-i18n="tools.title">Creator Tools</h1><p data-i18n="tools.text">Analytics, source download, repost control, and upload repair tools.</p></div>
+        <div class="tool-list">
+          <button class="tool-card glass" id="openUploadTool" type="button"><span class="tool-icon">U</span><div><strong data-i18n="tools.studioTitle">TikTok Studio</strong><small data-i18n="tools.studioText">Open the upload and content dashboard.</small></div><b>›</b></button>
+          <button class="tool-card glass" id="openProfileTool" type="button"><span class="tool-icon">R</span><div><strong data-i18n="tools.repostTitle">Repost Remover</strong><small data-i18n="tools.repostText">Open your profile and manage reposts with filters.</small></div><b>›</b></button>
+          <button class="tool-card glass" id="clearTtwidBtn" type="button"><span class="tool-icon">F</span><div><strong data-i18n="tools.fixTitle">Fix Upload</strong><small data-i18n="tools.fixText">Clear the TTWID cookie when TikTok upload gets stuck.</small></div><b>›</b></button>
+        </div>
+        <div class="settings-card glass">
+          <div class="card-heading"><span data-i18n="tools.featuresTitle">Creator feature switches</span><small data-i18n="tools.featuresText">Enable only the features you actually use.</small></div>
+          <label class="toggle-row"><div><strong data-i18n="tools.authorTitle">Author Statistics</strong><small data-i18n="tools.authorText">Profile statistics and average likes.</small></div><input id="authorStatsEnabled" type="checkbox"><span class="switch"></span></label>
+          <label class="toggle-row"><div><strong data-i18n="tools.videoTitle">Video Statistics</strong><small data-i18n="tools.videoText">Views, likes, comments, shares, and saves.</small></div><input id="videoStatsEnabled" type="checkbox"><span class="switch"></span></label>
+          <label class="toggle-row"><div><strong data-i18n="tools.enhancedTitle">Enhanced Statistics</strong><small data-i18n="tools.enhancedText">Engagement rate and derived metrics.</small></div><input id="enhancedStatsEnabled" type="checkbox"><span class="switch"></span></label>
+          <label class="toggle-row"><div><strong data-i18n="tools.downloadTitle">Original Download</strong><small data-i18n="tools.downloadText">Download the best detected source URL from video pages.</small></div><input id="originalDownloadEnabled" type="checkbox"><span class="switch"></span></label>
+          <label class="toggle-row"><div><strong data-i18n="tools.removerTitle">Repost Remover</strong><small data-i18n="tools.removerText">Filter, pause, stop, and export reports.</small></div><input id="repostRemoverEnabled" type="checkbox"><span class="switch"></span></label>
+        </div>
+        <button class="primary-action" id="saveToolsBtn" data-i18n="tools.save">Save Tools</button>
+        <div class="status" id="toolsStatus"></div>
+      </section>
+
+      <section class="view" id="view-settings">
+        <div class="section-title"><span class="kicker" data-i18n="settings.kicker">Configuration</span><h1 data-i18n="settings.title">Studio Settings</h1><p data-i18n="settings.text">Control the interceptor, appearance, preflight, and publish-time caption behavior.</p></div>
+
+        <div class="settings-card glass">
+          <div class="card-heading"><span data-i18n="settings.appearanceTitle">Appearance</span><small data-i18n="settings.appearanceText">Choose your interface language and theme.</small></div>
+          <div class="option-row">
+            <div><strong data-i18n="settings.languageTitle">Language</strong><small data-i18n="settings.languageText">The dashboard language used by the extension UI.</small></div>
+            <select id="uiLanguage" class="row-select">
+              <option value="en">English</option>
+              <option value="id">Bahasa Indonesia</option>
+              <option value="ru">Русский</option>
+              <option value="es">Español</option>
+            </select>
+          </div>
+          <label class="toggle-row"><div><strong data-i18n="settings.lightModeTitle">Light Mode</strong><small data-i18n="settings.lightModeText">Switch between the dark and light liquid glass themes.</small></div><input id="lightModeEnabled" type="checkbox"><span class="switch"></span></label>
+        </div>
+
+        <div class="settings-card glass">
+          <div class="card-heading"><span data-i18n="settings.behaviorTitle">Studio Behavior</span><small data-i18n="settings.behaviorText">Core upload controls for TikTok Studio.</small></div>
+          <label class="toggle-row"><div><strong data-i18n="settings.autoProcessTitle">Automatic processing</strong><small data-i18n="settings.autoProcessText">Hold the file before TikTok Studio receives it.</small></div><input id="autoProcessEnabled" type="checkbox"><span class="switch"></span></label>
+          <label class="toggle-row"><div><strong data-i18n="settings.badgeTitle">Status badge</strong><small data-i18n="settings.badgeText">Show the DiyyMotion status badge inside TikTok Studio.</small></div><input id="badgeEnabled" type="checkbox"><span class="switch"></span></label>
+          <label class="toggle-row"><div><strong data-i18n="settings.compactBadgeTitle">Compact badge</strong><small data-i18n="settings.compactBadgeText">Use a smaller badge layout.</small></div><input id="compactBadgeEnabled" type="checkbox"><span class="switch"></span></label>
+          <label class="toggle-row"><div><strong data-i18n="settings.panelTitle">Studio panel</strong><small data-i18n="settings.panelText">Show the optional upload status panel.</small></div><input id="studioPanelEnabled" type="checkbox"><span class="switch"></span></label>
+          <label class="toggle-row"><div><strong data-i18n="settings.preflightTitle">Quality preflight</strong><small data-i18n="settings.preflightText">Check size, format, duration, and resolution.</small></div><input id="preflightEnabled" type="checkbox"><span class="switch"></span></label>
+        </div>
+
+        <div class="settings-card glass">
+          <div class="card-heading"><span data-i18n="settings.publishTitle">Publish caption</span><small data-i18n="settings.publishText">The caption is injected right before the publish action is sent.</small></div>
+          <label class="toggle-row"><div><strong data-i18n="settings.captionTitle">Caption at Publish</strong><small data-i18n="settings.captionText">Apply the configured caption only when the Publish button is pressed.</small></div><input id="autoCaptionEnabled" type="checkbox"><span class="switch"></span></label>
+          <label class="toggle-row"><div><strong data-i18n="settings.signatureTitle">Publish signature guard</strong><small data-i18n="settings.signatureText">Keep the publish signature attached to the final request.</small></div><input id="publishSignatureEnabled" type="checkbox"><span class="switch"></span></label>
+          <label class="control-label" for="captionSuffix" data-i18n="settings.captionLabel">Caption text</label>
+          <textarea id="captionSuffix" rows="3" maxlength="220"></textarea>
+        </div>
+
+        <div class="settings-card glass">
+          <div class="card-heading"><span data-i18n="settings.limitsTitle">Upload guidance</span><small data-i18n="settings.limitsText">Recommended constraints used during preflight.</small></div>
+          <div class="field-grid">
+            <label><span data-i18n="settings.recommendedSize">Recommended size</span><div class="input-suffix"><input id="maxFileMb" type="number" min="1" max="4096"><b>MB</b></div></label>
+            <label><span data-i18n="settings.minLongEdge">Minimum long edge</span><div class="input-suffix"><input id="minLongEdge" type="number" min="240" max="8192"><b>px</b></div></label>
+          </div>
+        </div>
+
+        <div class="settings-card glass system-card">
+          <div class="card-heading"><span data-i18n="diagnostics.title">Diagnostic Center</span><small data-i18n="diagnostics.text">Check browser APIs, local processing resources, and TikTok Studio connectivity.</small></div>
+          <div class="system-summary">
+            <div><span data-i18n="diagnostics.overall">Overall status</span><strong id="diagnosticOverall" class="state-pill neutral" data-i18n="diagnostics.neverRun">Not run</strong></div>
+          </div>
+          <div class="system-list" id="diagnosticList"></div>
+          <div class="action-grid three-actions">
+            <button class="secondary-action" id="runDiagnosticsBtn" type="button" data-i18n="diagnostics.run">Run Diagnostics</button>
+            <button class="secondary-action" id="copyDiagnosticsBtn" type="button" data-i18n="diagnostics.copy">Copy Report</button>
+            <button class="secondary-action" id="downloadDiagnosticsBtn" type="button" data-i18n="diagnostics.download">Download Report</button>
+          </div>
+          <div class="status" id="diagnosticStatus"></div>
+        </div>
+
+        <div class="settings-card glass system-card">
+          <div class="card-heading"><span data-i18n="build.title">Official Build Verification</span><small data-i18n="build.text">Verify the signed build record and hashes of packaged files.</small></div>
+          <div class="info-grid">
+            <div class="info-row"><span data-i18n="build.creator">Creator</span><strong>@diyy4a__</strong></div>
+            <div class="info-row"><span data-i18n="build.version">Version</span><strong id="buildVersion">1.4.0</strong></div>
+            <div class="info-row"><span data-i18n="build.buildId">Build ID</span><strong id="buildId">DYM-140-20260619</strong></div>
+            <div class="info-row"><span data-i18n="build.integrity">Integrity</span><strong id="buildIntegrity" class="state-pill neutral" data-i18n="build.unavailable">Not verified</strong></div>
+          </div>
+          <button class="secondary-action" id="verifyBuildBtn" type="button" data-i18n="build.verify">Verify Build</button>
+          <div class="status" id="buildStatus"></div>
+        </div>
+
+        <div class="settings-card glass system-card">
+          <div class="card-heading"><span data-i18n="update.title">Update</span><small data-i18n="update.text">Check the official GitHub Releases page for a newer DiyyMotion version.</small></div>
+          <label class="toggle-row"><div><strong data-i18n="update.autoTitle">Automatic update check</strong><small data-i18n="update.autoText">Check at most once every 24 hours when the dashboard opens.</small></div><input id="autoUpdateCheckEnabled" type="checkbox"><span class="switch"></span></label>
+          <div class="info-grid compact-info">
+            <div class="info-row"><span data-i18n="update.installed">Installed</span><strong id="installedVersion">1.4.0</strong></div>
+            <div class="info-row"><span data-i18n="update.latest">Latest</span><strong id="latestVersion">—</strong></div>
+            <div class="info-row"><span data-i18n="update.lastChecked">Last checked</span><strong id="lastUpdateCheck" data-i18n="update.never">Never</strong></div>
+          </div>
+          <div id="updateNotes" class="release-notes hidden"></div>
+          <div class="action-grid">
+            <button class="secondary-action" id="checkUpdateBtn" type="button" data-i18n="update.check">Check for Updates</button>
+            <button class="secondary-action" id="openUpdateBtn" type="button" data-i18n="update.open" disabled>Open Download Page</button>
+          </div>
+          <div class="status" id="updateStatus"></div>
+        </div>
+
+        <button class="primary-action" id="saveSettingsBtn" data-i18n="settings.save">Save Settings</button>
+        <div class="status" id="settingsStatus"></div>
+      </section>
+    </main>
+  </div>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
