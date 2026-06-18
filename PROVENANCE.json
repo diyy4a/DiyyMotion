@@ -1,0 +1,11 @@
+{
+  "schema": "https://diyymotion.local/provenance/v1",
+  "project": "DiyyMotion",
+  "version": "1.3.2",
+  "creator": "@diyy4a__",
+  "copyright": "© 2026 @diyy4a__",
+  "build_type": "private-obfuscated-watermarked",
+  "notice": "Original project by @diyy4a__. Unauthorized copying, rebranding, redistribution, or derivative resale is prohibited.",
+  "activation": "none",
+  "third_party_licenses": "THIRD_PARTY_NOTICES.md"
+}
