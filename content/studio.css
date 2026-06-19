@@ -78,3 +78,18 @@
 @keyframes dmPanelIn{from{opacity:0;transform:translateY(-6px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
 @media(max-width:720px){#diyymotion-activation{top:10px;right:10px}#diyymotion-studio-panel{top:52px;right:10px;width:min(330px,calc(100vw - 20px))}}
 @media(max-width:520px){#diyymotion-activation{max-width:calc(100vw - 20px)}#diyymotion-studio-panel{right:8px;top:50px;width:min(320px,calc(100vw - 16px));max-height:calc(100dvh - 62px);overflow-y:auto}}
+
+
+/* v1.5.0 Studio live console */
+#diyymotion-studio-panel .dm-console{margin-top:8px;overflow:hidden;border:1px solid #292933;border-radius:13px;background:#07070a}
+#diyymotion-studio-panel .dm-console-head{display:flex;align-items:center;gap:7px;padding:8px 9px;border-bottom:1px solid #24242c;background:#121218}
+#diyymotion-studio-panel .dm-console-head>span{display:flex;gap:4px}
+#diyymotion-studio-panel .dm-console-head i{display:block;width:6px;height:6px;border-radius:50%;background:#ff5f57}
+#diyymotion-studio-panel .dm-console-head i:nth-child(2){background:#febc2e}#diyymotion-studio-panel .dm-console-head i:nth-child(3){background:#28c840}
+#diyymotion-studio-panel .dm-console-head strong{margin-right:auto;color:#aaaab4;font:800 7px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.08em}
+#diyymotion-studio-panel .dm-console-head button{padding:4px 6px;border:1px solid #30303a;border-radius:6px;color:#83838f;background:#191920;cursor:pointer;font:800 6px/1 ui-monospace,SFMono-Regular,Menlo,monospace}
+#diyymotion-studio-panel .dm-console-screen{height:118px;overflow:auto;padding:8px 9px;color:#d7d7df;font:500 7px/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;scrollbar-width:thin}
+#diyymotion-studio-panel .dm-console-line{display:grid;grid-template-columns:44px 48px minmax(0,1fr);gap:5px;padding:1px 0;overflow-wrap:anywhere}
+#diyymotion-studio-panel .dm-console-line>span{color:#5f5f6b}#diyymotion-studio-panel .dm-console-line>b{color:#bea4ff}#diyymotion-studio-panel .dm-console-line>em{color:#c9c9d1;font-style:normal}
+#diyymotion-studio-panel .dm-console-line[data-level="success"]>b{color:#63d7ab}#diyymotion-studio-panel .dm-console-line[data-level="warn"]>b{color:#f5bd68}#diyymotion-studio-panel .dm-console-line[data-level="error"]>b{color:#ff7289}
+#diyymotion-studio-panel .dm-console-empty{color:#686875}

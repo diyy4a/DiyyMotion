@@ -43,3 +43,8 @@ HQ encoding can use considerable memory and CPU on Android. Metadata-only proces
 ## Ownership and provenance
 
 This build contains code headers, `OWNERSHIP.md`, `PROVENANCE.json`, a signed `BUILD.json`, and SHA-256 file hashes. The original creator is @diyy4a__.
+
+
+## Protected distribution build
+
+This package is the obfuscated distribution build for regular installation. The app name, interface, features, and version match the readable source build. JavaScript application files are obfuscated while third-party FFmpeg binaries retain their original licensed form.

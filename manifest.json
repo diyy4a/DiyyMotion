@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "DiyyMotion",
-  "version": "1.4.1",
-  "description": "DiyyMotion by @diyy4a__: TikTok creator tools with local video processing and no activation.",
+  "version": "1.5.0",
+  "description": "DiyyMotion by @diyy4a__: TikTok creator tools with Fusion Maximum local processing, live console, and no activation.",
   "permissions": [
     "cookies",
     "downloads",
