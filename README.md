@@ -1,50 +1,69 @@
 > DiyyMotion © 2026 @diyy4a__. See `OWNERSHIP.md` for provenance and usage restrictions.
 
-# DiyyMotion v1.4.1
+# DiyyMotion v1.5.0
 
-DiyyMotion is a Chromium-compatible TikTok creator extension with local video processing and no activation gate.
+DiyyMotion is a Chromium-compatible TikTok creator extension with local video processing and no activation system.
 
 ## Main workflow
 
-- DiyyMotion Fusion processes the selected video through the enabled components in sequence.
-- Local HQ fallback, MP4 metadata cleanup, AAC 48 kHz handling, and Legacy 1080/60 compatibility remain available.
-- The prepared file is returned to the official TikTok Studio upload flow.
+- A video selected in TikTok Studio is intercepted before upload.
+- Fusion Maximum runs the enabled local processing components in sequence.
+- The processed file is returned to the official TikTok Studio uploader.
+- TikTok still performs its own server-side transcoding after upload.
+
+## Fusion Maximum
+
+All main processing components are enabled by default:
+
+- Temporal Method with 2× input timestamp scaling.
+- Local H.264 HQ encoding with CRF 18 and `yuv420p` output.
+- AAC audio normalization at 192 kbps and 48 kHz.
+- MP4 Fast Start and Clean Matrix B metadata cleanup.
+- Scoped quality request flags during upload and publish requests.
+- Legacy 1080/60 compatibility handling.
+
+Temporal timestamp scaling is experimental and can change video duration and effective frame pacing.
+
+## Live console
+
+The live console is available in:
+
+- The extension dashboard and popup.
+- The TikTok Studio processing panel.
+- Manual processing and automatic upload workflows.
+
+The console records initialization, preflight checks, FFmpeg progress, metadata processing, upload handoff, warnings, and errors. Logs are stored locally and can be cleared from the interface.
 
 ## Creator tools
 
-- TikTok Studio file interceptor and status panel.
-- Publish-time caption support.
+- TikTok Studio file interceptor and processing status panel.
+- Publish-time caption and signature support.
 - Manual local video processor.
 - Video and profile statistics.
-- Source video download with a browser fallback for Chromium forks that do not expose `chrome.downloads`.
+- Source video download with a fallback for Chromium forks without `chrome.downloads`.
 - Repost management and TTWID repair tool.
+- Diagnostic Center and GitHub Releases update checker.
 
-## v1.4.1 changes
+## v1.5.0 changes
 
-- Fixed the background color mismatch between short and long dashboard pages.
-- Reduced Android/Mises compositing and glass oversaturation differences.
-- Added a fallback for Original Download when the native Download API is unavailable.
-- Updated diagnostics so optional browser APIs are reported as warnings when a working fallback exists.
-- Added Japanese, Simplified Chinese, Traditional Chinese, and Korean interface languages.
-- Retained English, Indonesian, Russian, and Spanish.
-- Kept Diagnostic Center, signed build verification, and GitHub Releases update checking.
+- Added Fusion Maximum as the default automatic upload workflow.
+- Enabled Temporal Method, HQ fallback, Clean Matrix B, AAC 48 kHz, quality metadata flags, and Legacy 1080/60 by default.
+- Added a live system console to the dashboard, popup, and TikTok Studio panel.
+- Added FFmpeg progress, processing-stage, request-patch, handoff, warning, and error logs.
+- Added scoped quality metadata patching instead of permanently replacing page functions.
+- Kept the Mises-compatible download fallback, multilingual interface, diagnostics, build metadata, and update checker.
 
 ## Installation
 
 1. Extract the ZIP.
 2. Open the browser extensions page.
 3. Enable Developer mode.
-4. Choose Load unpacked.
+4. Choose **Load unpacked**.
 5. Select the extracted DiyyMotion folder.
 6. Reopen TikTok Studio.
 
-HQ encoding can use considerable memory and CPU on Android. Metadata-only processing remains lighter.
+Local HQ encoding can use considerable memory and CPU on Android. Large videos may fail on devices with limited RAM.
 
-## Ownership and provenance
+## Build and provenance
 
-This build contains code headers, `OWNERSHIP.md`, `PROVENANCE.json`, a signed `BUILD.json`, and SHA-256 file hashes. The original creator is @diyy4a__.
-
-
-## Protected distribution build
-
-This package is the obfuscated distribution build for regular installation. The app name, interface, features, and version match the readable source build. JavaScript application files are obfuscated while third-party FFmpeg binaries retain their original licensed form.
+This package contains code ownership records, provenance metadata, a local build manifest, and SHA-256 file hashes. Development and protected builds remain unsigned unless they are signed with the official DiyyMotion release key.
