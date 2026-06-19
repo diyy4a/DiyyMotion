@@ -1,13 +1,13 @@
 {
   "schema": "https://diyymotion.local/provenance/v1",
   "project": "DiyyMotion",
-  "version": "1.5.0",
+  "version": "1.5.6",
   "creator": "@diyy4a__",
   "copyright": "© 2026 @diyy4a__",
   "build_type": "protected-obfuscated",
   "notice": "Original project by @diyy4a__. Unauthorized copying, rebranding, redistribution, or derivative resale is prohibited.",
   "activation": "none",
   "third_party_licenses": "THIRD_PARTY_NOTICES.md",
-  "build_id": "DYM-150-20260619-OBF",
-  "verification": "Unsigned protected distribution build; local hashes are recorded in BUILD.json and FILE_HASHES.sha256."
+  "build_id": "DYM-156-20260619-PROT",
+  "verification": "Unsigned protected build; sign a release build with the official private key."
 }

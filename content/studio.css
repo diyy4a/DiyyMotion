@@ -80,7 +80,7 @@
 @media(max-width:520px){#diyymotion-activation{max-width:calc(100vw - 20px)}#diyymotion-studio-panel{right:8px;top:50px;width:min(320px,calc(100vw - 16px));max-height:calc(100dvh - 62px);overflow-y:auto}}
 
 
-/* v1.5.0 Studio live console */
+/* Studio live console */
 #diyymotion-studio-panel .dm-console{margin-top:8px;overflow:hidden;border:1px solid #292933;border-radius:13px;background:#07070a}
 #diyymotion-studio-panel .dm-console-head{display:flex;align-items:center;gap:7px;padding:8px 9px;border-bottom:1px solid #24242c;background:#121218}
 #diyymotion-studio-panel .dm-console-head>span{display:flex;gap:4px}

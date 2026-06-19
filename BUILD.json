@@ -3,10 +3,10 @@
     "schema": "https://diyymotion.local/build/v1",
     "project": "DiyyMotion",
     "creator": "@diyy4a__",
-    "version": "1.5.0",
-    "buildId": "DYM-150-20260619-OBF",
+    "version": "1.5.6",
+    "buildId": "DYM-156-20260619-PROT",
     "official": false,
-    "generatedAt": "2026-06-19T01:47:36Z",
+    "generatedAt": "2026-06-19T04:32:31Z",
     "files": [
       {
         "path": "OWNERSHIP.md",
@@ -20,13 +20,13 @@
       },
       {
         "path": "PROVENANCE.json",
-        "sha256": "289e7ed9c35db28dee4d32e797bb560f032beb9b3be74bb64ea2ea4193f528a0",
-        "size": 578
+        "sha256": "155f84c2363690e9c37b06f1a43ae42234c309a71aff9e02fd2590abccbe69ca",
+        "size": 554
       },
       {
         "path": "README.md",
-        "sha256": "c97575dd6917063c4f2cc07bd976e77348ebe1ff8b69a5b3418653b1431b1e5d",
-        "size": 2945
+        "sha256": "2918e0e16f45b4c1ba1522eb70ff5eb5b686ffe89b9cbfc5c712f74c1a11c08c",
+        "size": 6640
       },
       {
         "path": "THIRD_PARTY_NOTICES.md",
@@ -40,13 +40,23 @@
       },
       {
         "path": "background.js",
-        "sha256": "976d9f37893aced0d482a2718a69455a0dc48f8b05ba76a2cf0299b39166c846",
-        "size": 26652
+        "sha256": "4eadc8ec15e6bd9cd5cb0112c8072b6a7fc44f81b844b27150642f200b0d3bfc",
+        "size": 28215
+      },
+      {
+        "path": "content/dm-ffmpeg-client.js",
+        "sha256": "ffd2e2098353100b35a90c6f924f910ec71b42a3072f0051a754d72b2c7b4dc5",
+        "size": 38524
+      },
+      {
+        "path": "content/dm-mp4.js",
+        "sha256": "9e23fc970f9f29d9b07e1d5b0c93f423ee0fb9164e8748e8946c790ffe3cf934",
+        "size": 37236
       },
       {
         "path": "content/main.js",
-        "sha256": "84b8fd524c4214a4eb8f27ada9c7c35b7b4aed6e3ed2e6abdebb23d56e231dc2",
-        "size": 47197
+        "sha256": "88f7c03aee7fdd1dfac237d8a21c9618cda52f99aff859092af9a4f020f3db20",
+        "size": 47345
       },
       {
         "path": "content/profile.css",
@@ -55,18 +65,18 @@
       },
       {
         "path": "content/profile.js",
-        "sha256": "23aa442482e242e6be4af03e6763708894ec463d48da8b1d83bf14794f5baf9b",
-        "size": 101882
+        "sha256": "beb7387218f65f52a483df5c17bbf0e41855d8a6f2144635e2bbbe89979688c1",
+        "size": 103282
       },
       {
         "path": "content/studio.css",
-        "sha256": "98a7fbf00779b39332a314283a97ac3cf5910cb3e8049aa4ddfc647ce279e55f",
-        "size": 10323
+        "sha256": "c8daa2c5a5ca67de8dfd74185f07af1f9f39f0b9df6d830c2ff154ef9ab898a5",
+        "size": 10316
       },
       {
         "path": "content/studio.js",
-        "sha256": "4eb5f214eb98723a8361e4eaa6e3afa2a7c5718e99acd61f8b637996c675afcd",
-        "size": 178491
+        "sha256": "634789caa7394d98c8a58debb566d7638da6dbb75fce4d646fca27b5c578e95d",
+        "size": 183334
       },
       {
         "path": "content/video.css",
@@ -75,13 +85,23 @@
       },
       {
         "path": "content/video.js",
-        "sha256": "994bbdcef2e6ecafeccc73f65bde2fd5f7dfd4b410925da2d5f9dcef24c8a4f9",
-        "size": 55694
+        "sha256": "bee54057e39d3adac03983a999b94f06eb2a1d5a3583635b918fb2d626ea201e",
+        "size": 56021
       },
       {
         "path": "dashboard.html",
-        "sha256": "4bd426bcf4c31f266de6246e40198d524f02c105ab7c1cc620367e28b8bf5d76",
-        "size": 24375
+        "sha256": "c5bf257f717d7aca63fc457196c69801edc1c6e48395034d8e029eff3f0e6fa6",
+        "size": 24386
+      },
+      {
+        "path": "ffmpeg-host.html",
+        "sha256": "236851c2f2dfaa2531903f44f70d2ac75b62acae286bf6cd5a991814e92098ad",
+        "size": 299
+      },
+      {
+        "path": "ffmpeg-host.js",
+        "sha256": "3c822684466c98cb96d10117bf0ca56bdaf045017e23a00fa31e33447f7f399a",
+        "size": 18541
       },
       {
         "path": "icons/icon128.png",
@@ -105,13 +125,13 @@
       },
       {
         "path": "lib/ffmpeg/ffmpeg-client.js",
-        "sha256": "c0a779117657572346197fc10e19c95af46efb5b577916e86bf5f5d0144111bc",
-        "size": 55906
+        "sha256": "b2004158d059a7ab8bfa18a78515a1183f6af167326fecbbb43f808ea245bd39",
+        "size": 77159
       },
       {
         "path": "lib/ffmpeg/ffmpeg-core.js",
-        "sha256": "87b7051660c5f527f8d5eb32994403f9d2b936fafbfd8b51717b30f104f40e6a",
-        "size": 111948
+        "sha256": "bed303bbfdacc9ff0c02c0ca63b7ef0d55dc8cdf7232f3e0c86e3624c653cf7c",
+        "size": 111921
       },
       {
         "path": "lib/ffmpeg/ffmpeg-core.wasm",
@@ -120,38 +140,38 @@
       },
       {
         "path": "lib/ffmpeg/ffmpeg-worker.js",
-        "sha256": "72006d0583e0605a9cb597817d8f4394bd88bafb171f4c93b5028611f0867889",
-        "size": 6557
+        "sha256": "5aa7ceab08ffd32d534059ceb77ecd7f85f1a58e12b2a07d39231fbccd0fb986",
+        "size": 8210
       },
       {
         "path": "lib/mp4.js",
-        "sha256": "2a9828cf7bfd95a204022298920ae65ae1a40cb016dfeb92c53dcc555f678bcf",
-        "size": 37865
+        "sha256": "10cdd6e08eee467c9fd60dda95529675017ea294731f5dc7a042704d46b087d6",
+        "size": 39073
       },
       {
         "path": "manifest.json",
-        "sha256": "8088283e837b79f36ba72de4dbe2980bbb09a881ae488b7e18ce2b58d64581fe",
-        "size": 2653
+        "sha256": "e61c996afb22a518960b717844d045649efd755dd70a90653f45777f7dc001f6",
+        "size": 2703
       },
       {
         "path": "popup.css",
-        "sha256": "9f2a97d5d55b7d114e5ffb1109231a03a9eb127ce4dd9b3b2d207321432565eb",
-        "size": 25377
+        "sha256": "d881479696b5cd5faa818769f6b1d969e0ecc3ab8b4e665b209d43e164c49bdb",
+        "size": 25370
       },
       {
         "path": "popup.html",
-        "sha256": "4bd426bcf4c31f266de6246e40198d524f02c105ab7c1cc620367e28b8bf5d76",
-        "size": 24375
+        "sha256": "c5bf257f717d7aca63fc457196c69801edc1c6e48395034d8e029eff3f0e6fa6",
+        "size": 24386
       },
       {
         "path": "popup.js",
-        "sha256": "6394d944ff4ab978ffbeb9ad1e0b94c0badf1b4add5315560b9b4260aeda92b2",
-        "size": 406596
+        "sha256": "74da41cb5441353af4f32874b06c181d82b1ebf1c9b83b91313fe2122e1db1f2",
+        "size": 406676
       },
       {
         "path": "preview.html",
-        "sha256": "4bd426bcf4c31f266de6246e40198d524f02c105ab7c1cc620367e28b8bf5d76",
-        "size": 24375
+        "sha256": "c5bf257f717d7aca63fc457196c69801edc1c6e48395034d8e029eff3f0e6fa6",
+        "size": 24386
       }
     ]
   },

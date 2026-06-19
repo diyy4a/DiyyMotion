@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "DiyyMotion",
-  "version": "1.5.0",
-  "description": "DiyyMotion by @diyy4a__: TikTok creator tools with Fusion Maximum local processing, live console, and no activation.",
+  "version": "1.5.6",
+  "description": "DiyyMotion by @diyy4a__: TikTok creator tools with adaptive Fast Fusion, live console, and no activation.",
   "permissions": [
     "cookies",
     "downloads",
@@ -56,6 +56,8 @@
         "content/studio.css"
       ],
       "js": [
+        "content/dm-mp4.js",
+        "content/dm-ffmpeg-client.js",
         "content/studio.js"
       ],
       "run_at": "document_start"
@@ -92,12 +94,12 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "lib/mp4.js",
         "assets/logo.png",
         "lib/ffmpeg/ffmpeg-worker.js",
         "lib/ffmpeg/ffmpeg-core.js",
         "lib/ffmpeg/ffmpeg-core.wasm",
-        "lib/ffmpeg/ffmpeg-client.js"
+        "ffmpeg-host.html",
+        "ffmpeg-host.js"
       ],
       "matches": [
         "https://*.tiktok.com/*"

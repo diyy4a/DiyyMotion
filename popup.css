@@ -564,7 +564,7 @@ textarea { resize: vertical; }
 }
 
 
-/* v1.4.1 viewport and mobile consistency fixes */
+/* v1.5.6 viewport and mobile consistency fixes */
 html { background: var(--bg); }
 .view.active { min-height: calc(100dvh - 122px); }
 .section-title, .card-heading, .toggle-row > div, .option-row > div { min-width: 0; }
@@ -574,7 +574,7 @@ html { background: var(--bg); }
 @media (prefers-reduced-motion: reduce) { body::after { animation: none; } }
 
 
-/* v1.5.0 live terminal */
+/* Live terminal */
 .console-dock { margin-top: 11px; overflow: hidden; border-radius: 20px; }
 .console-head { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 13px; border-bottom:1px solid var(--border-soft); }
 .console-title { display:flex; align-items:center; gap:10px; min-width:0; }
