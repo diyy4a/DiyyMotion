@@ -1,41 +1,33 @@
 > DiyyMotion © 2026 @diyy4a__. See `OWNERSHIP.md` for provenance and usage restrictions.
 
-<<<<<<< HEAD
-# DiyyMotion v1.4.0
+# DiyyMotion v1.4.1
 
-DiyyMotion is a Chrome-compatible TikTok creator extension.
-=======
-# DiyyMotion v1.3.2
+DiyyMotion is a Chromium-compatible TikTok creator extension with local video processing and no activation gate.
 
-Private local build for Chromium-compatible browsers.
->>>>>>> 692f351b09780fc80fa210b1d7725d55877fbf4b
+## Main workflow
 
-## Upload methods
+- DiyyMotion Fusion processes the selected video through the enabled components in sequence.
+- Local HQ fallback, MP4 metadata cleanup, AAC 48 kHz handling, and Legacy 1080/60 compatibility remain available.
+- The prepared file is returned to the official TikTok Studio upload flow.
 
-- Smart Quality: selects Metadata Patch or HQ Local Encode from the selected file.
-- HQ Local Encode: local FFmpeg H.264 High Profile + AAC 48 kHz + Fast Start processing.
-- Metadata Patch: Clean Matrix B and optional timing metadata patching without re-encoding.
-- Legacy 1080/60 FPS: experimental client-side validation bypass.
-- Original Pass-through: forwards the original file without video modification.
+## Creator tools
 
-## Existing features retained
+- TikTok Studio file interceptor and status panel.
+- Publish-time caption support.
+- Manual local video processor.
+- Video and profile statistics.
+- Source video download with a browser fallback for Chromium forks that do not expose `chrome.downloads`.
+- Repost management and TTWID repair tool.
 
-- TikTok Studio file interceptor.
-- DiyyMotion Activated badge and closable status panel.
-- Automatic caption: `UPLOAD METHOD #DiyyMotion`.
-- Manual MP4 metadata processor and FPS timing patcher.
-- Preflight checks and local processing statistics.
-- Repost review/export.
+## v1.4.1 changes
 
-## New creator features
-
-- Local HQ encode with configurable CRF, bitrate, and preset.
-- Video statistics and engagement rate panel.
-- Author/profile statistics panel.
-- Best-source video download.
-- Filtered repost remover with pause, stop, delays, and JSON/CSV report.
-- TTWID upload-fix tool.
-- Publish signature guard.
+- Fixed the background color mismatch between short and long dashboard pages.
+- Reduced Android/Mises compositing and glass oversaturation differences.
+- Added a fallback for Original Download when the native Download API is unavailable.
+- Updated diagnostics so optional browser APIs are reported as warnings when a working fallback exists.
+- Added Japanese, Simplified Chinese, Traditional Chinese, and Korean interface languages.
+- Retained English, Indonesian, Russian, and Spanish.
+- Kept Diagnostic Center, signed build verification, and GitHub Releases update checking.
 
 ## Installation
 
@@ -46,20 +38,8 @@ Private local build for Chromium-compatible browsers.
 5. Select the extracted DiyyMotion folder.
 6. Reopen TikTok Studio.
 
-HQ Encode uses considerable memory and CPU, especially on Android. Metadata Patch remains the lighter method.
-
-
-## v1.4.0
-- Added Diagnostic Center with copyable and downloadable reports.
-- Added signed official build verification with packaged file hashes.
-- Added manual and automatic GitHub Releases update checking.
-- Added Spanish interface language.
-- Existing video pipeline, descriptions, tools, and no-activation access remain unchanged.
-
-
-## Access
-DiyyMotion opens directly without activation, account connection, or follow verification.
+HQ encoding can use considerable memory and CPU on Android. Metadata-only processing remains lighter.
 
 ## Ownership and provenance
 
-This build contains visible code headers plus `OWNERSHIP.md` and `PROVENANCE.json`. The original creator is @diyy4a__. These markers document authorship but cannot technically force third-party tools or AI systems to refuse edits.
+This build contains code headers, `OWNERSHIP.md`, `PROVENANCE.json`, a signed `BUILD.json`, and SHA-256 file hashes. The original creator is @diyy4a__.
