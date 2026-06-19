@@ -3,10 +3,6 @@
 <<<<<<< HEAD
 # DiyyMotion v1.4.0
 
-DiyyMotion is a Chrome-compatible TikTok creator extension.
-=======
-# DiyyMotion v1.3.2
-
 Private local build for Chromium-compatible browsers.
 >>>>>>> 692f351b09780fc80fa210b1d7725d55877fbf4b
 
